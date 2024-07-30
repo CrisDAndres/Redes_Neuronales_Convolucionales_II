@@ -1,21 +1,34 @@
 # Clasificación de Patrones de Estrés en Plantas con Redes Neuronales Convolucionales (EfficientNetB0)
- 
-Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para el reconocimiento de dígitos escritos a mano en el conjunto de datos MNIST. Se incluyen técnicas de aumento de datos (*Data Augmentation*) para mejorar el rendimiento del modelo y una interfaz de usuario simple desarrollada con Streamlit que permite dibujar un dígito en un lienzo y obtener una predicción del modelo.
 
 <p align="center">
-  <img src="img/img_app.png" alt="App" width="300px">
+  <img src="img/stress-abiotic.png" alt="App" width="300px">
 </p>
 <p align="center">
   <b>Streamlit App 📱 disponible </b><a href="https://digit-recognition0-9.streamlit.app/">aquí</a>!
 </p>
 
+Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y pre-procesamiento y pre-entrenamiento mediante el modelo **EfficientNetB0** para la optimización y mejora del rendimiento de la red neuronal.
+
+<span style="color:red">EfficientNetB0 ha demostrado ser altamente eficiente en términos de rendimiento de precisión y uso de recursos computacionales. Esto hace que sea una opción popular para aplicaciones de clasificación de imágenes que requieren alta precisión y eficiencia, como en dispositivos móviles o sistemas con recursos limitados.</span>
+
+## Introducción 🔬
+
+Las plantas, al igual que otros organismos vivos, pueden experimentar diversos tipos de estrés que afectan su crecimiento, desarrollo y productividad. Los factores de estrés en plantas se clasifican en dos categorías principales: factores **abióticos** y **bióticos**.
+
+- Los factores abióticos se refieren a las condiciones ambientales adversas que pueden causar daño a las plantas (sequía, temperaturas extremas, acumulación de sales, contaminantes o luz excesiva o insuficiente).
+- Los factores bióticos son los organismos vivos que interactúan con las plantas (plagas o enfermedades causadas por patógenos).
+
+Las plantas han desarrollado mecanismos de respuesta y adaptación al estrés, como cambios génicos, morfológicos o bioquímicos.
+
+**Comprender los diferentes tipos de estrés en plantas y sus mecanismos de respuesta es fundamental para desarrollar estrategias de manejo que permitan mitigar los efectos negativos del estrés y mejorar la productividad de los cultivos.**
+
 ## Estructura del proyecto 📂
 
 El proyecto consiste en los siguientes archivos:
 
+- ``data/``: Carpeta que contiene las imágenes descargadas de Kaggle para el entrenamiento de la red neuronal.
 - ``notebook/``: Carpeta que contiene el notebook de Jupyter con el código utilizado para realizar el entrenamiento de la red neuronal, con explicaciones detalladas de cada paso.
-- ``models/``: Carpeta que contiene el modelo de la red neuronal entrenada en formato ``.h5``.
-- ``numeros.py``: Script de Python para la aplicación de Streamlit.
+- ``models/``: Carpeta que contiene el mejor modelo obtenido durante el entrenamiento de la red neuronal, en formato ``.keras``.
 - ``img/``: Carpeta que contiene imágenes del proyecto.
 
 ## Tecnologías utilizadas 🛠️
