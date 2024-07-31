@@ -9,7 +9,7 @@
   <b>Streamlit App 📱 disponible </b><a href="https://digit-recognition0-9.streamlit.app/">aquí</a>!
 </p>
 
-Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente en hojas de arroz. Se incluyen técnicas de aumento de datos (Data Augmentation) y preprocesamiento, ambos realizados con **EfficientNetB0** dentro de *ImageDataGenerator*, así como el uso del modelo preentrenado EfficientNetB0 para la optimización y mejora del rendimiento de la red neuronal.
+Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente en hojas de arroz. Se incluyen técnicas de aumento de datos (Data Augmentation) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del 91.82 %.
 
 <span style="color:red">EfficientNetB0 ha demostrado ser altamente eficiente en términos de rendimiento de precisión y uso de recursos computacionales. Esto hace que sea una opción popular para aplicaciones de clasificación de imágenes que requieren alta precisión y eficiencia, como en dispositivos móviles o sistemas con recursos limitados.</span>
 
@@ -63,10 +63,10 @@ EfficientNet introduce una técnica llamada *compound scaling*, que ajusta de ma
 Para ejecutar este proyecto en tu máquina local, sigue los siguientes pasos:
 
 1. Clona este repositorio en tu máquina local.
-2. Descarga las carpetas ``data``,``models`` y ``notebook``, así como el scrip de Python.
+2. Descarga las carpetas ``data``,``models`` y ``notebook``, así como el script de Python ``plant_stress.py``.
 3. Instala las dependencias necesarias ejecutando ``pip install -r requirements.txt``.
-4. Ejecuta el archivo ``numeros.py`` y asegúrate de que has descargado las carpetas en el mismo entorno. A continuación, abre la terminal y ejecuta el siguiente comando: ``streamlit run numeros.py``. Esto abrirá el navegador web ``http://localhost:8501/`` que te llevará a la aplicación.
-5. Dibuja✏️ un dígito del 0 al 9 en el lienzo y presiona el botón de **PREDECIR** para ver la predicción. 
+4. Ejecuta el archivo ``plant_stress.py`` y asegúrate de que has descargado las carpetas en el mismo entorno. A continuación, abre la terminal y ejecuta el siguiente comando: ``streamlit run plant_stress.py``. Esto abrirá el navegador web ``http://localhost:8502/`` que te llevará a la aplicación.
+5. Carga una imagen desde tu ordenador y presiona el botón de **Clasificar imagen** para ver la clasificación de la enfermedad de la hoja. 
 
 ### To do ⚙️
 
