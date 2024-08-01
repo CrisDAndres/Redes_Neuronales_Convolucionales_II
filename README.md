@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b><i>Fuente de la imagen: https://kcenter.lallemandplantcare.com/</i></b>
+  <i>Fuente de la imagen: https://kcenter.lallemandplantcare.com/</i>
 </p>
 
 <p align="center">
