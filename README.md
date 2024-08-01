@@ -4,12 +4,15 @@
   <img src="img/stress-abiotic.png" alt="App" width="300px">
 </p>
 
-*Fuente de la imagen: https://kcenter.lallemandplantcare.com/*
+<p align="center">
+  <b><i>Fuente de la imagen: https://kcenter.lallemandplantcare.com/</i></b>
+</p>
+
 <p align="center">
   <b>Streamlit App 📱 disponible </b><a href="https://digit-recognition0-9.streamlit.app/">aquí</a>!
 </p>
 
-Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente en hojas de arroz. Se incluyen técnicas de aumento de datos (Data Augmentation) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del 91.82 %.
+Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del 91.82 %.
 
 <span style="color:red">EfficientNetB0 ha demostrado ser altamente eficiente en términos de rendimiento de precisión y uso de recursos computacionales. Esto hace que sea una opción popular para aplicaciones de clasificación de imágenes que requieren alta precisión y eficiencia, como en dispositivos móviles o sistemas con recursos limitados.</span>
 
@@ -24,18 +27,18 @@ Las plantas, al igual que otros organismos vivos, pueden experimentar diversos t
 
 Este proyecto trata de identificar 4 de los estreses bióticos más comunes y destructivos de los cultivos de arroz: 
 
-- **Tizón bacteriano** (*Bacterial Leaf Blight*), causado por el grupo de bacterias *Xanthomonas oryzae*.
-- **Piricularia o añublo del arroz** (*Rice blast*), causada por el hongo *Pyricularia oryzae*.
-- **Mancha foliar** (*Leaf spot*), cuasada por varios patógenos, incluyendo hongos.
-- **Hispa del arroz** (*Rice hispa*), causada por el insecto *Dicladispa armigera*.
+- 🌾**Tizón bacteriano** (*Bacterial Leaf Blight*), causado por el grupo de bacterias *Xanthomonas oryzae*.
+- 🍂**Piricularia o añublo del arroz** (*Rice blast*), causada por el hongo *Pyricularia oryzae*.
+- 🍃**Mancha foliar** (*Leaf spot*), cuasada por varios patógenos, incluyendo hongos.
+- 🐛**Hispa del arroz** (*Rice hispa*), causada por el insecto *Dicladispa armigera*.
 
 ## Estructura del proyecto 📂
 
 El proyecto consiste en los siguientes archivos:
 
-- ``data/``: Carpeta que contiene las imágenes descargadas de Kaggle para el entrenamiento de la red neuronal.
+- ``data/``: Carpeta que contiene las imágenes descargadas de Kaggle (*https://www.kaggle.com/datasets/ritikbompilwar/plantstressidentification*) para el entrenamiento de la red neuronal.
 - ``notebook/``: Carpeta que contiene el notebook de Jupyter con el código utilizado para realizar el entrenamiento de la red neuronal, con explicaciones detalladas de cada paso.
-- ``models/``: Carpeta que contiene el mejor modelo obtenido durante el entrenamiento de la red neuronal, en formato ``.keras``.
+- ``models/``: Carpeta que contiene el mejor modelo obtenido durante el entrenamiento de la red neuronal, en formato *.keras*.
 - ``img/``: Carpeta que contiene imágenes del proyecto.
 
 ## Tecnologías utilizadas 🛠️
