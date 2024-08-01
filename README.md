@@ -12,7 +12,7 @@
   <b>Streamlit App 📱 disponible </b><a href="https://digit-recognition0-9.streamlit.app/">aquí</a>!
 </p>
 
-Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del 91.82 %.
+Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente enfermedades causadas por microorganismos o insectos en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del **91.82 %**.
 
 <span style="color:red">EfficientNetB0 ha demostrado ser altamente eficiente en términos de rendimiento de precisión y uso de recursos computacionales. Esto hace que sea una opción popular para aplicaciones de clasificación de imágenes que requieren alta precisión y eficiencia, como en dispositivos móviles o sistemas con recursos limitados.</span>
 
@@ -20,8 +20,8 @@ Este proyecto implementa redes neuronales convolucionales (CNN) utilizando Tenso
 
 Las plantas, al igual que otros organismos vivos, pueden experimentar diversos tipos de estrés que afectan su crecimiento, desarrollo y productividad. Los factores de estrés en plantas se clasifican en dos categorías principales: factores **abióticos** y **bióticos**.
 
-- Los factores abióticos se refieren a las condiciones ambientales adversas que pueden causar daño a las plantas (sequía, temperaturas extremas, acumulación de sales, contaminantes o luz excesiva o insuficiente).
-- Los factores bióticos son los organismos vivos que interactúan con las plantas (plagas o enfermedades causadas por patógenos).
+- Los factores **abióticos** se refieren a las condiciones ambientales adversas que pueden causar daño a las plantas (sequía, temperaturas extremas, acumulación de sales, contaminantes o luz excesiva o insuficiente).
+- Los factores **bióticos** son los organismos vivos que interactúan con las plantas (plagas o enfermedades causadas por patógenos).
 
 **Comprender los diferentes tipos de estrés en plantas y sus mecanismos de respuesta es fundamental para desarrollar estrategias de manejo que permitan mitigar los efectos negativos del estrés y mejorar la productividad de los cultivos.**
 
