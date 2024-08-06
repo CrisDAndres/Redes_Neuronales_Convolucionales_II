@@ -11,7 +11,7 @@ def load_model():
     Función para cargar el modelo
     """
     try:
-        model = tf.keras.models.load_model('models/best_model_plants.keras')
+        model = tf.keras.models.load_model('models/plant_stress_model.keras')
         st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
@@ -51,7 +51,7 @@ st.markdown("""
 - 🌾 **Bacterial Leaf Blight (BLB)**: Tizón bacteriano
 - 🍂 **Blast**: Piricularia o añublo del arroz
 - 🌿 **Healthy**: Hoja sana
-- 🐛 **Hispa**
+- 🐛 **Hispa**: Causada por el insecto *Dicladispa armigera*
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
 

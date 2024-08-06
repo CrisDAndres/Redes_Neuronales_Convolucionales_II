@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <b>Streamlit App 📱 disponible </b><a href="https://digit-recognition0-9.streamlit.app/">aquí</a>!
+  <b>Streamlit App 📱 disponible </b><a href="https://plant-stress-recognition.streamlit.app/">aquí</a>!
 </p>
 
 Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente enfermedades causadas por microorganismos o insectos en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del **91.82 %**.
@@ -68,7 +68,7 @@ Para ejecutar este proyecto en tu máquina local, sigue los siguientes pasos:
 1. Clona este repositorio en tu máquina local.
 2. Descarga las carpetas ``data``,``models`` y ``notebook``, así como el script de Python ``plant_stress.py``.
 3. Instala las dependencias necesarias ejecutando ``pip install -r requirements.txt``.
-4. Ejecuta el archivo ``plant_stress.py`` y asegúrate de que has descargado las carpetas en el mismo entorno. A continuación, abre la terminal y ejecuta el siguiente comando: ``streamlit run plant_stress.py``. Esto abrirá el navegador web ``http://localhost:8502/`` que te llevará a la aplicación.
+4. Ejecuta el archivo ``plant_stress.py`` y asegúrate de que has descargado las carpetas en el mismo entorno. A continuación, abre la terminal y ejecuta el siguiente comando: ``streamlit run plant_stress.py``. Esto abrirá el navegador web ``http://localhost:8501/`` que te llevará a la aplicación.
 5. Carga una imagen desde tu ordenador y presiona el botón de **Clasificar imagen** para ver la clasificación de la enfermedad de la hoja. 
 
 ### To do ⚙️
