@@ -18,19 +18,28 @@ st.markdown("""
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
 
-# Ruta del archivo del modelo
-model_path = 'models/best_model_plants.keras'
+# Función para cargar el modelo
+def cargar_modelo():
+    try:
+        model = tf.keras.models.load_model('models/best_model_plants.keras')
+        return model
+    except Exception as e:
+        st.error(f"Error al cargar el modelo: {str(e)}")
+        return None
+    
+# # Ruta del archivo del modelo
+# model_path = 'models/best_model_plants.keras'
 
-# Cargar el modelo entrenado
-@st.cache_resource
-def load_model(path):
-    """
-    Función para cargar el modelo una vez.
-    """
-    return tf.keras.models.load_model(path)
+# # Cargar el modelo entrenado
+# @st.cache_resource
+# def load_model(path):
+#     """
+#     Función para cargar el modelo una vez.
+#     """
+#     return tf.keras.models.load_model(path)
 
-model = load_model(model_path)
-st.success("Modelo cargado exitosamente.")
+# model = load_model(model_path)
+# st.success("Modelo cargado exitosamente.")
     
 # Interfaz de usuario para cargar una imagen
 uploaded_file = st.file_uploader("Elige una imagen...", type=["jpg", "jpeg", "png"])
