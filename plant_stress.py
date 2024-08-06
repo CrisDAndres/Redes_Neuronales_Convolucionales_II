@@ -19,13 +19,18 @@ st.markdown("""
 """)
 
 # Función para cargar el modelo
-def cargar_modelo():
+@st.cache_resource
+def load_model():
     try:
         model = tf.keras.models.load_model('models/best_model_plants.keras')
+        st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
         st.error(f"Error al cargar el modelo: {str(e)}")
         return None
+
+# Cargar el modelo una vez al inicio de la aplicación
+model = load_model()
     
 # # Ruta del archivo del modelo
 # model_path = 'models/best_model_plants.keras'
