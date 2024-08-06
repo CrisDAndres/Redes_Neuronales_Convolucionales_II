@@ -105,5 +105,21 @@ if uploaded_file is not None:
         confidence = np.max(predictions) * 100
 
         # Mostrar el resultado de la predicción
-        st.write(f"**La imagen es clasificada como:** {predicted_label}")
-        st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+        # if "healthy" in predicted_label:
+        #     st.write(f"**La imagen es clasificada como: Planta sana🌿")
+        #     st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+        
+        # else:
+        #     st.write(f"**La imagen es clasificada con una enfermedad:** {predicted_label}")
+        #     st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+        
+        # Definir colores para las etiquetas
+        if "healthy" in predicted_label:
+            color = "green"
+            label_text = f"Planta sana 🌿"
+
+            st.markdown(f"**La imagen es clasificada como: <span style='color:{color};'>{label_text}</span>**", unsafe_allow_html=True)
+            st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+        else:
+            st.write(f"**La imagen es clasificada con una enfermedad:** {predicted_label}")
+            st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
