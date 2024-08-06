@@ -44,13 +44,12 @@ def predict(_model, img_array):
 # Título y descripción de la aplicación
 st.title("🌿 Clasificación de Enfermedades en Hojas de Cultivos de Arroz")
 st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
-st.write("El modelo es capaz de clasificar las siguientes enfermedades:")
+st.markdown("El modelo es capaz de identificar plantas *sanas* o con *enfermedades*. Dentro de las enfermedades, puede clasificar las siguientes:")
 
 # Agregar iconos y descripciones de las enfermedades
 st.markdown("""
 - 🌾 **Bacterial Leaf Blight (BLB)**: Tizón bacteriano
 - 🍂 **Blast**: Piricularia o añublo del arroz
-- 🌿 **Healthy**: Hoja sana
 - 🐛 **Hispa**: Causada por el insecto *Dicladispa armigera*
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
@@ -105,21 +104,6 @@ if uploaded_file is not None:
         confidence = np.max(predictions) * 100
 
         # Mostrar el resultado de la predicción
-        # if "healthy" in predicted_label:
-        #     st.write(f"**La imagen es clasificada como: Planta sana🌿")
-        #     st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+        st.write(f"**La imagen es clasificada como:** {predicted_label}")
+        st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
         
-        # else:
-        #     st.write(f"**La imagen es clasificada con una enfermedad:** {predicted_label}")
-        #     st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
-        
-        # Definir colores para las etiquetas
-        if "healthy" in predicted_label:
-            color = "green"
-            label_text = f"Planta sana 🌿"
-
-            st.markdown(f"**La imagen es clasificada como: <span style='color:{color};'>{label_text}</span>**", unsafe_allow_html=True)
-            st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
-        else:
-            st.write(f"**La imagen es clasificada con una enfermedad:** {predicted_label}")
-            st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
