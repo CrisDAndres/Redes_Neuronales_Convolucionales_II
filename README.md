@@ -40,6 +40,7 @@ El proyecto consiste en los siguientes archivos:
 - ``notebook/``: Carpeta que contiene el notebook de Jupyter con el código utilizado para realizar el entrenamiento de la red neuronal, con explicaciones detalladas de cada paso.
 - ``models/``: Carpeta que contiene el mejor modelo obtenido durante el entrenamiento de la red neuronal, en formato *.keras*.
 - ``img/``: Carpeta que contiene imágenes del proyecto.
+- ``plant_stress.py``: Script de Python para la aplicación de Streamlit.
 
 ## Tecnologías utilizadas 🛠️
 
