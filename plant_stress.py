@@ -5,18 +5,18 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 ####################### FUNCIONES ########################
-@st.cache_resource
-def load_model():
-    """
-    Función para cargar el modelo
-    """
-    try:
-        model = tf.keras.models.load_model('models/plant_stress_model.keras')
-        st.success("Modelo cargado exitosamente.")
-        return model
-    except Exception as e:
-        st.error(f"Error al cargar el modelo: {str(e)}")
-        return None
+# @st.cache_resource
+# def load_model():
+#     """
+#     Función para cargar el modelo
+#     """
+#     try:
+#         model = tf.keras.models.load_model('models/plant_stress_model.keras')
+#         st.success("Modelo cargado exitosamente.")
+#         return model
+#     except Exception as e:
+#         st.error(f"Error al cargar el modelo: {str(e)}")
+#         return None
 
 def preprocess_image(uploaded_file):
     """
@@ -54,22 +54,22 @@ st.markdown("""
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
 
-# Cargar el modelo una vez al inicio de la aplicación
-model = load_model()
+# # Cargar el modelo una vez al inicio de la aplicación
+# model = load_model()
     
-# # Ruta del archivo del modelo
-# model_path = 'models/best_model_plants.keras'
+# Ruta del archivo del modelo
+model_path = 'models/plant_stress_model'
 
-# # Cargar el modelo entrenado
-# @st.cache_resource
-# def load_model(path):
-#     """
-#     Función para cargar el modelo una vez.
-#     """
-#     return tf.keras.models.load_model(path)
+# Cargar el modelo entrenado
+@st.cache_resource
+def load_model(path):
+    """
+    Función para cargar el modelo una vez.
+    """
+    return tf.keras.models.load_model(path)
 
-# model = load_model(model_path)
-# st.success("Modelo cargado exitosamente.")
+model = load_model(model_path)
+st.success("Modelo cargado exitosamente.")
     
 # Cargar una imagen
 uploaded_file = st.file_uploader("Elige una imagen...", type=["jpg", "jpeg", "png"])
