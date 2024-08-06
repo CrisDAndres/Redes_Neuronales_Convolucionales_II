@@ -38,7 +38,7 @@ El proyecto consiste en los siguientes archivos:
 
 - ``data/``: Carpeta que contiene las imágenes descargadas de Kaggle (*https://www.kaggle.com/datasets/ritikbompilwar/plantstressidentification*) para el entrenamiento de la red neuronal.
 - ``notebook/``: Carpeta que contiene el notebook de Jupyter con el código utilizado para realizar el entrenamiento de la red neuronal, con explicaciones detalladas de cada paso.
-- ``models/``: Carpeta que contiene el mejor modelo obtenido durante el entrenamiento de la red neuronal, en formato *.keras*.
+- ``models/``: Carpeta que contiene el mejor modelo obtenido durante el entrenamiento de la red neuronal, en formato *.h5*.
 - ``img/``: Carpeta que contiene imágenes del proyecto.
 - ``plant_stress.py``: Script de Python para la aplicación de Streamlit.
 
