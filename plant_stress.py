@@ -5,18 +5,18 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 ####################### FUNCIONES ########################
-# @st.cache_resource
-# def load_model():
-#     """
-#     Función para cargar el modelo
-#     """
-#     try:
-#         model = tf.keras.models.load_model('models/plant_stress_model.keras')
-#         st.success("Modelo cargado exitosamente.")
-#         return model
-#     except Exception as e:
-#         st.error(f"Error al cargar el modelo: {str(e)}")
-#         return None
+@st.cache_resource
+def load_model():
+    """
+    Función para cargar el modelo
+    """
+    try:
+        model = tf.keras.models.load_model(r'models\plant_stress_model.keras')
+        st.success("Modelo cargado exitosamente.")
+        return model
+    except Exception as e:
+        st.error(f"Error al cargar el modelo: {str(e)}")
+        return None
 
 def preprocess_image(uploaded_file):
     """
@@ -44,7 +44,7 @@ def predict(_model, img_array):
 # Título y descripción de la aplicación
 st.title("🌿 Clasificación de Enfermedades en Hojas de Cultivos de Arroz")
 st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
-st.markdown("El modelo es capaz de identificar plantas *sanas* o con *enfermedades*. Dentro de las enfermedades, puede clasificar las siguientes:")
+st.markdown("El modelo es capaz de identificar hojas **sanas** o con **enfermedades**. Dentro de las enfermedades, puede clasificar las siguientes:")
 
 # Agregar iconos y descripciones de las enfermedades
 st.markdown("""
@@ -54,22 +54,8 @@ st.markdown("""
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
 
-# # Cargar el modelo una vez al inicio de la aplicación
-# model = load_model()
-    
-# Ruta del archivo del modelo
-model_path = 'models/plant_stress_model'
-
-# Cargar el modelo entrenado
-@st.cache_resource
-def load_model(path):
-    """
-    Función para cargar el modelo una vez.
-    """
-    return tf.keras.models.load_model(path)
-
-model = load_model(model_path)
-st.success("Modelo cargado exitosamente.")
+# Cargar el modelo 
+model = load_model()
     
 # Cargar una imagen
 uploaded_file = st.file_uploader("Elige una imagen...", type=["jpg", "jpeg", "png"])
