@@ -43,7 +43,7 @@ def predict(_model, img_array):
 
 # Título y descripción de la aplicación
 st.title("🌿 Clasificación de Enfermedades en Hojas de Cultivos de Arroz")
-st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
+
 st.markdown("El modelo es capaz de identificar hojas **sanas** o con **enfermedades**. Dentro de las enfermedades, puede clasificar las siguientes:")
 
 # Agregar iconos y descripciones de las enfermedades
@@ -53,6 +53,11 @@ st.markdown("""
 - 🐛 **Hispa**: Causada por el insecto *Dicladispa armigera*
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
+
+st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
+
+
+####################### EJECUTAR MODELO ########################
 
 # Cargar el modelo 
 model = load_model()
