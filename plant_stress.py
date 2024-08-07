@@ -2,7 +2,6 @@ import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.applications.efficientnet import preprocess_input
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.layers import BatchNormalization
 import numpy as np
 
 ####################### FUNCIONES ########################
@@ -12,7 +11,7 @@ def load_model():
     Función para cargar el modelo
     """
     try:
-        model = tf.keras.models.load_model('models/plant_stress_model.h5',custom_objects={'BatchNormalization': BatchNormalization}) # Utiliza el método custom_objects para deserializar correctamente las capas, ya que me daba un error en streamlit
+        model = tf.keras.models.load_model('models/plant_stress_model.keras')
         st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
