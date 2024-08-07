@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow.keras.applications.efficientnet import preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
+from tensorflow.keras.layers import TFSMLayer
 
 ####################### FUNCIONES ########################
 @st.cache_resource
@@ -12,6 +13,7 @@ def load_model():
     """
     try:
         model = tf.keras.models.load_model('./models/plant_stress_model')
+        model = TFSMLayer(model_path, call_endpoint='serving_default')
         st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
