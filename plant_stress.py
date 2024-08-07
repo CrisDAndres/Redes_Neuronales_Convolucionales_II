@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 ####################### FUNCIONES ########################
-# @st.cache_resource
+@st.cache_resource
 def load_model():
     """
     Función para cargar el modelo
@@ -32,12 +32,16 @@ def preprocess_image(uploaded_file):
         st.error(f"Error al cargar o preprocesar la imagen: {e}")
         return None
 
-# @st.cache_data
+@st.cache_data
 def predict(_model, img_array):
     """
     Función para realizar la prediccion
     """
-    return _model.predict(img_array)
+    try:
+        return _model.predict(img_array)
+    except Exception as e:
+        st.error(f"Error al realizar la predicción: {e}")
+        return None
 
 ####################### INTERFAZ GRÁFICA ########################
 
@@ -54,15 +58,14 @@ st.markdown("""
 - 🍃 **Leaf Spot**: Mancha foliar
 """)
 
-st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
 
-
-####################### EJECUTAR MODELO ########################
+####################### EJECUTAR APP ########################
 
 # Cargar el modelo 
 model = load_model()
     
 # Cargar una imagen
+st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
 uploaded_file = st.file_uploader("Elige una imagen...", type=["jpg", "jpeg", "png"])
             
 if uploaded_file is not None:
@@ -81,20 +84,24 @@ if uploaded_file is not None:
         # Predicción
         with st.spinner('Realizando la predicción...'):    
             predictions = predict(model, img_array)
-            predicted_class = np.argmax(predictions, axis=1)[0]
+            if predictions is not None:
+                predicted_class = np.argmax(predictions, axis=1)[0]
 
-        # Mapeo de etiquetas con iconos
-        class_labels = [
-            '🌾 Bacterial Leaf Blight (BLB)', 
-            '🍂 Blast', 
-            '🌿 Healthy', 
-            '🐛 Hispa', 
-            '🍃 Leaf Spot'
-        ]
-        predicted_label = class_labels[predicted_class]
-        confidence = np.max(predictions) * 100
+                # Mapeo de etiquetas con iconos
+                class_labels = [
+                    '🌾 Bacterial Leaf Blight (BLB)', 
+                    '🍂 Blast', 
+                    '🌿 Healthy', 
+                    '🐛 Hispa', 
+                    '🍃 Leaf Spot'
+                ]
+                predicted_label = class_labels[predicted_class]
+                confidence = np.max(predictions) * 100
 
-        # Mostrar el resultado de la predicción
-        st.write(f"**La imagen es clasificada como:** {predicted_label}")
-        st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+                # Mostrar el resultado de la predicción
+                st.write(f"**La imagen es clasificada como:** {predicted_label}")
+                st.write(f"**Con una probabilidad de:** {confidence:.2f}%")
+            
+            else:
+                st.error("No se pudieron obtener predicciones.")
         
