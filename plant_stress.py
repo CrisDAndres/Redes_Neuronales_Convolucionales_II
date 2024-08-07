@@ -3,7 +3,6 @@ import tensorflow as tf
 from tensorflow.keras.applications.efficientnet import preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
-from tensorflow.keras.layers import TFSMLayer
 
 ####################### FUNCIONES ########################
 @st.cache_resource
@@ -12,8 +11,7 @@ def load_model():
     Función para cargar el modelo
     """
     try:
-        model = tf.keras.models.load_model('./models/plant_stress_model')
-        model = TFSMLayer(model_path, call_endpoint='serving_default')
+        model = tf.keras.models.load_model('./models/plant_stress_model.h5')
         st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
