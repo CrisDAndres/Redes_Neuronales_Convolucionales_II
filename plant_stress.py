@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 ####################### FUNCIONES ########################
-@st.cache_resource
+# @st.cache_resource
 def load_model():
     """
     Función para cargar el modelo
@@ -32,7 +32,7 @@ def preprocess_image(uploaded_file):
         st.error(f"Error al cargar o preprocesar la imagen: {e}")
         return None
 
-@st.cache_data
+# @st.cache_data
 def predict(_model, img_array):
     """
     Función para realizar la prediccion
