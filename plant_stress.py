@@ -11,7 +11,7 @@ def load_model():
     Función para cargar el modelo
     """
     try:
-        model = tf.keras.models.load_model('models/plant_stress_model.keras')
+        model = tf.keras.models.load_model('./models/plant_stress_model.h5')
         st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
