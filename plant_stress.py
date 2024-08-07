@@ -2,18 +2,16 @@ import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.applications.efficientnet import preprocess_input
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.models import load_model as tf_load_model
-
 import numpy as np
 
 ####################### FUNCIONES ########################
 @st.cache_resource
-def load_keras_model():
+def load_model():
     """
     Función para cargar el modelo
     """
     try:
-        model = tf_load_model('./models/plant_stress_model.keras')
+        model = tf.keras.models.load_model('./models/plant_stress_model.keras')
         st.success("Modelo cargado exitosamente.")
         return model
     except Exception as e:
@@ -64,7 +62,7 @@ st.markdown("""
 ####################### EJECUTAR APP ########################
 
 # Cargar el modelo 
-model = load_keras_model()
+model = load_model()
     
 # Cargar una imagen
 st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
