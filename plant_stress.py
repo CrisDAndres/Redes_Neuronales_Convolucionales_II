@@ -65,7 +65,14 @@ st.markdown("""
 model = load_model()
     
 # Cargar una imagen
-st.write("Carga una imagen de la hoja de una planta para clasificar su enfermedad.")
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <p style="color: darkgreen; font-size: 22px;">Carga una imagen de la hoja de una planta para clasificar su enfermedad:</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 uploaded_file = st.file_uploader("Elige una imagen...", type=["jpg", "jpeg", "png"])
             
 if uploaded_file is not None:
