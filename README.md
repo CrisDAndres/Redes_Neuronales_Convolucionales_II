@@ -72,10 +72,6 @@ Para ejecutar este proyecto en tu máquina local, sigue los siguientes pasos:
 4. Ejecuta el archivo ``plant_stress.py`` y asegúrate de que has descargado las carpetas en el mismo entorno. A continuación, abre la terminal y ejecuta el siguiente comando: ``streamlit run plant_stress.py``. Esto abrirá el navegador web ``http://localhost:8501/`` que te llevará a la aplicación.
 5. Carga una imagen desde tu ordenador y presiona el botón de **Clasificar imagen** para ver la clasificación de la enfermedad de la hoja. 
 
-### To do ⚙️
-
-- [ ] Corrección de *warnings* en Streamlit.
-
 ## Contacto 📧
 Si tienes alguna pregunta o sugerencia sobre este proyecto, no dudes en ponerte en contacto conmigo. Puedes hacerlo a través de mis redes sociales.
  
