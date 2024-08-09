@@ -12,7 +12,7 @@
   <b>Streamlit App 📱 disponible </b><a href="https://plant-stress-recognition.streamlit.app/">aquí</a>!
 </p>
 
-Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente enfermedades causadas por microorganismos o insectos en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del **93.86 %**.
+Este proyecto implementa redes neuronales convolucionales (CNN) utilizando TensorFlow y Keras para la clasificación del estrés vegetal, específicamente enfermedades causadas por microorganismos o insectos en hojas de arroz. Se incluyen técnicas de aumento de datos (*Data Augmentation*) y preprocesamiento y optimización usando el modelo preentrenado **EfficientNetB0** para la mejora del rendimiento de la red neuronal, consiguiendo una precisión del **92.16 %**.
 
 <span style="color:red">EfficientNetB0 ha demostrado ser altamente eficiente en términos de rendimiento de precisión y uso de recursos computacionales. Esto hace que sea una opción popular para aplicaciones de clasificación de imágenes que requieren alta precisión y eficiencia, como en dispositivos móviles o sistemas con recursos limitados.</span>
 
